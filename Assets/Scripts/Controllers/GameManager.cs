@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void HideGameOver()
     {
+        if (gameOver == null) return;
         gameOver.gameObject.SetActive(false);
         gamePaused = false;
         gameOver.alpha = 0;
@@ -60,6 +61,6 @@ public class GameManager : MonoBehaviour
 
     public void InitPrefab(Vector3 position, int prefab)
     {
-        Instantiate(vfx[prefab], transform, true);
+        Instantiate(vfx[prefab], transform);
     }
 }

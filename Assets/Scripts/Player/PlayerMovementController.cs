@@ -15,6 +15,7 @@ public class PlayerMovementController : MonoBehaviour
     private bool isMoving;
     private float moveVelocity;
     private ClockController clock;
+    private SpriteRenderer sprite;
     private GameManager game;
     private Animator anim;
 
@@ -24,6 +25,7 @@ public class PlayerMovementController : MonoBehaviour
         clock = ClockController.instance;
         game = GameManager.instance;
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
 
@@ -46,14 +48,6 @@ public class PlayerMovementController : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (LayerMask.NameToLayer("Ground") == collision.gameObject.layer)
-        {
-
-        }
-    }
-
     private void FixedUpdate()
     {
         if (game.gamePaused) return;
@@ -65,5 +59,7 @@ public class PlayerMovementController : MonoBehaviour
 
         // Apply animation.
         anim.SetBool("isMoving", isMoving);
+        if (rb.velocity.x < 0) sprite.flipX = true;
+        if (rb.velocity.x > 0) sprite.flipX = false;
     }
 }
