@@ -17,6 +17,7 @@ public class PlayerJumpController : MonoBehaviour
     private bool isGrounded;
     private float jumpTimeCounter;
 
+    private Animator anim;
     private GameManager game;
     private ClockController clock;
 
@@ -26,6 +27,7 @@ public class PlayerJumpController : MonoBehaviour
     {
         game = GameManager.instance;
         clock = ClockController.instance;
+        anim = GetComponent<Animator>();
         if (allowInfiniteJump) isGrounded = true;
     }
 
@@ -63,6 +65,9 @@ public class PlayerJumpController : MonoBehaviour
         {
             isJumping = false;
         }
+
+        // Update the animator.
+        anim.SetBool("isJumping", isJumping || rb.velocity.y != 0);
     }
 
     private void OnDrawGizmos()

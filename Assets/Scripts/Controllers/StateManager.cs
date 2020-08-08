@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-
     public State[] states;
 
     private int currentStateIndex = 0;
     public State currentState { get; private set; }
 
     private UIController ui;
+    private GameManager game;
 
 
     #region Singleton
@@ -28,14 +28,17 @@ public class StateManager : MonoBehaviour
 
     private void Start()
     {
+        game = GameManager.instance;
         ui = UIController.instance;
-        GoToState(0);
+        GoToStateNoVFX(0);
         ui.ResetMarkings();
     }
 
-    public bool GoToState(int index)
+    public void GoToState(int index)
     {
-        Debug.Log(index);
+
+        // Play the VFX.
+        game.InitPrefab(transform.position, 1);
 
         // Turn off the current state.
         if (currentState != null)
@@ -51,6 +54,22 @@ public class StateManager : MonoBehaviour
         // Decrease the number of clock usages.
         ui.RemoveMarking();
 
-        return true;
+    }
+
+    public void GoToStateNoVFX(int index)
+    {
+        // Turn off the current state.
+        if (currentState != null)
+        {
+            currentState.gameObject.SetActive(false);
+        }
+
+        // Set the new state.
+        currentState = states[index];
+        currentStateIndex = index;
+        currentState.gameObject.SetActive(true);
+
+        // Decrease the number of clock usages.
+        ui.RemoveMarking();
     }
 }

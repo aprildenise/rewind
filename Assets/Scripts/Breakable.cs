@@ -22,12 +22,15 @@ public class Breakable : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(transform.position, interactionRadius, allowInteractions))
         {
-            if (player.states.currentState.gameObject.GetComponent<Destroyer>() != null)
+            Destroyer destroyer = player.states.currentState.gameObject.GetComponent<Destroyer>();
+            if (destroyer != null)
             {
                 if (game.gamePaused) return;
 
                 if (Input.GetKey(KeyCode.Space))
                 {
+                    destroyer.Hit();
+                    game.InitPrefab(transform.position, 2);
                     Destroy(this.gameObject);
                 }
             }

@@ -9,18 +9,21 @@ public class PlayerMovementController : MonoBehaviour
     /// Rigidbody of the PARENT object.
     /// </summary>
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private ParticleSystem dust;
     public float moveSpeed;
 
     private bool isMoving;
     private float moveVelocity;
     private ClockController clock;
     private GameManager game;
+    private Animator anim;
 
 
     private void Start()
     {
         clock = ClockController.instance;
         game = GameManager.instance;
+        anim = GetComponent<Animator>();
     }
 
 
@@ -39,6 +42,16 @@ public class PlayerMovementController : MonoBehaviour
         isMoving = moveInput != Vector3.zero;
         moveVelocity = moveInput.x * moveSpeed;
 
+        if (isMoving) dust.Play();
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (LayerMask.NameToLayer("Ground") == collision.gameObject.layer)
+        {
+
+        }
     }
 
     private void FixedUpdate()
@@ -48,7 +61,9 @@ public class PlayerMovementController : MonoBehaviour
         if (clock.isShowing) return; // Restrict movement if the clock is up.
 
         // Apply movement.
-        //if (isMoving) rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
         rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
+
+        // Apply animation.
+        anim.SetBool("isMoving", isMoving);
     }
 }

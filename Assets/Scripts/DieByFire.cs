@@ -7,6 +7,7 @@ public class DieByFire : MonoBehaviour
 
     private GameManager game;
 
+
     private void Start()
     {
         game = GameManager.instance;
@@ -17,6 +18,7 @@ public class DieByFire : MonoBehaviour
         if (collision.gameObject.GetComponent<Fire>() != null)
         {
             gameObject.SetActive(false);
+            game.InitPrefab(transform.position, 0);
             game.ShowGameOver();
         }
     }

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public CanvasGroup gameOver;
+    public GameObject[] vfx;
 
     public bool gamePaused { get; private set; }
 
@@ -55,5 +56,10 @@ public class GameManager : MonoBehaviour
     public void ReloadCurrentScene()
     {
         LoadLevel(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void InitPrefab(Vector3 position, int prefab)
+    {
+        Instantiate(vfx[prefab], transform, true);
     }
 }

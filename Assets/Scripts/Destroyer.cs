@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private Animator anim;
+
+    private void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Hit()
     {
-        
+        anim.SetTrigger("isHitting");
     }
+
 }
