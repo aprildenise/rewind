@@ -67,7 +67,7 @@ public class PlayerJumpController : MonoBehaviour
         }
 
         // Update the animator.
-        anim.SetBool("isJumping", isJumping || rb.velocity.y != 0);
+        anim.SetBool("isJumping", isJumping || !isGrounded);
     }
 
     private void OnDrawGizmos()

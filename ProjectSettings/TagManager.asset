@@ -43,12 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Platforms
-    uniqueID: 203857249
+  - name: Background
+    uniqueID: 1635297593
     locked: 0
   - name: Foreground
     uniqueID: 4220533029
     locked: 0
-  - name: Background
-    uniqueID: 1635297593
+  - name: Platforms
+    uniqueID: 203857249
     locked: 0
