@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Okie
+  m_text: Frosty!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5635313dc292b124999756a9ddd0bc2c, type: 2}
   m_sharedMaterial: {fileID: -5380533980404240228, guid: 5635313dc292b124999756a9ddd0bc2c,
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 9127501}
-    characterCount: 4
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 29817719}
   m_TextComponent: {fileID: 1263290965}
   m_materialReferenceIndex: 1
@@ -2060,7 +2060,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3320,10 +3320,10 @@ RectTransform:
   m_Father: {fileID: 1745263007}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &328569623
 MonoBehaviour:
@@ -3347,15 +3347,15 @@ MonoBehaviour:
   m_text: 'HOW TO PLAY
 
 
-    You''re a snowman granted the power to control time
-    and change your state at will, using a magical Clock. Find the key and reach
-    the goal at the end of the level. Be careful, though! You can only use your Clock
-    3 times before you die. Fire and water will kill you too.
+    You''re a magical snowman, granted the power to control
+    your states with a Clock! Unlock the goal at the end of the level using your
+    powers. You can only use your Clock three times before you die. Fire and water
+    will kill you too. Be careful!
 
 
-    Use the WASD
-    keys to move, SPACE to interact, and Q to use your Clock. Click and drag your
-    clock hand to choose a state to change to. Good luck!'
+    Use the WASD keys to move, SPACE to interact,
+    and Q to use your Clock. Click and drag your clock hand to choose a state to
+    change to. Good luck!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5635313dc292b124999756a9ddd0bc2c, type: 2}
   m_sharedMaterial: {fileID: -5380533980404240228, guid: 5635313dc292b124999756a9ddd0bc2c,
@@ -3384,7 +3384,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 97.05
+  m_fontSize: 95.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3422,15 +3422,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1292.6249, y: 69.59827, z: -1247.0884, w: -1192.8318}
+  m_margin: {x: 108.67688, y: 112.225586, z: 87.83789, w: 323.47882}
   m_textInfo:
     textComponent: {fileID: 328569623}
-    characterCount: 418
+    characterCount: 400
     spriteCount: 0
-    spaceCount: 86
-    wordCount: 85
+    spaceCount: 80
+    wordCount: 79
     linkCount: 0
-    lineCount: 11
+    lineCount: 10
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -3801,7 +3801,7 @@ GameObject:
   - component: {fileID: 401807831}
   - component: {fileID: 401807830}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3836,10 +3836,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -17402,17 +17402,18 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'SNOWTIME!
 
-    a game by April Denise @marchmayjune
+    a game by April Denise @march_mayjune
 
 
-    platformer assets
-    by Kenney Game Assets
+    platformer
+    assets by Kenney Game Assets
 
 
     skybox by BOXOPHONIC
 
 
-    music by wipics, OpenGameArt'
+    music by wipics,
+    OpenGameArt'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5635313dc292b124999756a9ddd0bc2c, type: 2}
   m_sharedMaterial: {fileID: -5380533980404240228, guid: 5635313dc292b124999756a9ddd0bc2c,
@@ -17422,7 +17423,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -17441,7 +17442,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 152.55
+  m_fontSize: 100
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17482,12 +17483,12 @@ MonoBehaviour:
   m_margin: {x: -1292.6249, y: 69.59827, z: -1247.0884, w: -1192.8318}
   m_textInfo:
     textComponent: {fileID: 1263290965}
-    characterCount: 109
+    characterCount: 140
     spriteCount: 0
-    spaceCount: 17
-    wordCount: 16
+    spaceCount: 22
+    wordCount: 21
     linkCount: 0
-    lineCount: 7
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -17827,7 +17828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1745263007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22618,7 +22619,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077744287}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -22635,7 +22636,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 0
   m_canvasRenderer: {fileID: 2077744290}
   m_TextComponent: {fileID: 328569623}
   m_materialReferenceIndex: 1

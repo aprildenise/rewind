@@ -6,6 +6,7 @@ public class CollapsingBlock : MonoBehaviour
 {
 
     public float timeUntilCollapse;
+    public float timeUntilDespawn;
     private float timer;
     private Rigidbody2D rb;
     private bool allowCountdown = false;
@@ -37,7 +38,7 @@ public class CollapsingBlock : MonoBehaviour
         }
 
         // Eventually, destroy this object.
-        if (timer <= timeUntilCollapse * -2)
+        if (timer <= timeUntilDespawn * -1)
         {
             Destroy(this.gameObject);
             return;

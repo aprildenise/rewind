@@ -52,3 +52,6 @@ TagManager:
   - name: Platforms
     uniqueID: 203857249
     locked: 0
+  - name: Super Foreground
+    uniqueID: 2225186753
+    locked: 0

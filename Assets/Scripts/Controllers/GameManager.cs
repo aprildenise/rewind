@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public CanvasGroup gameOver;
     public GameObject[] vfx;
+    public Animator sceneTransition;
 
     public bool gamePaused { get; private set; }
 
@@ -49,10 +50,20 @@ public class GameManager : MonoBehaviour
         gameOver.gameObject.SetActive(true) ;
     }
 
-    public void LoadLevel(int scene)
+    private IEnumerator LoadLevelWithTransition(int scene)
     {
+        sceneTransition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1f);
+
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
+
+    public void LoadLevel(int scene)
+    {
+        StartCoroutine(LoadLevelWithTransition(scene));
+    }
+
 
     public void ReloadCurrentScene()
     {
@@ -61,6 +72,7 @@ public class GameManager : MonoBehaviour
 
     public void InitPrefab(Vector3 position, int prefab)
     {
-        Instantiate(vfx[prefab], transform);
+        GameObject effect = vfx[prefab];
+        Instantiate(effect, position, effect.transform.rotation, transform);
     }
 }
