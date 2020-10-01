@@ -15,6 +15,7 @@ public class PlayerMovementController : MonoBehaviour
     private bool isMoving;
     private float moveVelocity;
     private ClockController clock;
+    private JournalController journal;
     private SpriteRenderer sprite;
     private GameManager game;
     private Animator anim;
@@ -23,6 +24,7 @@ public class PlayerMovementController : MonoBehaviour
     private void Start()
     {
         clock = ClockController.instance;
+        journal = JournalController.instance;
         game = GameManager.instance;
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
@@ -34,13 +36,14 @@ public class PlayerMovementController : MonoBehaviour
         if (game.gamePaused) return;
 
         // Check for clock input.
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             clock.ToggleClock();
+            return;
         }
-
-        if (game.gamePaused || clock.isShowing)
+        else if (Input.GetKeyDown(KeyCode.J))
         {
+            journal.ToggleJournal();
             return;
         }
         else
@@ -56,8 +59,9 @@ public class PlayerMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (game.gamePaused || clock.isShowing)
+        if (game.gamePaused)
         {
+            rb.velocity = Vector2.zero;
             return;
         }
 

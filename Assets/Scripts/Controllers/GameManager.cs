@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public bool gamePaused { get; private set; }
 
     private ClockController clock;
+    private JournalController journal;
 
     public static GameManager instance { get; private set; }
     private void Awake()
@@ -28,7 +29,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         clock = ClockController.instance;
+        journal = JournalController.instance;
         HideGameOver();
+    }
+
+    public bool HasScreenShowing()
+    {
+        return clock.isShowing || journal.isShowing || gamePaused;
     }
 
     public void HideGameOver()

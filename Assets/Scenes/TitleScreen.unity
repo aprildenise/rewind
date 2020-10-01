@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 102127013}
-    characterCount: 4
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -3344,18 +3344,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HOW TO PLAY
-
-
-    You''re a magical snowman, granted the power to control
+  m_text: "HOW TO PLAY\n\nYou're a magical snowman, granted the power to control
     your states with a Clock! Unlock the goal at the end of the level using your
-    powers. You can only use your Clock three times before you die. Fire and water
-    will kill you too. Be careful!
-
-
-    Use the WASD keys to move, SPACE to interact,
-    and Q to use your Clock. Click and drag your clock hand to choose a state to
-    change to. Good luck!'
+    powers. \n\nYou can only use your Clock three times before you die. Fire and
+    water will kill you too. Be careful!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5635313dc292b124999756a9ddd0bc2c, type: 2}
   m_sharedMaterial: {fileID: -5380533980404240228, guid: 5635313dc292b124999756a9ddd0bc2c,
@@ -3384,7 +3376,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 95.75
+  m_fontSize: 100
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3422,15 +3414,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 108.67688, y: 112.225586, z: 87.83789, w: 323.47882}
+  m_margin: {x: 303.72278, y: 112.225586, z: 287.75977, w: 323.47882}
   m_textInfo:
     textComponent: {fileID: 328569623}
-    characterCount: 400
+    characterCount: 258
     spriteCount: 0
-    spaceCount: 80
-    wordCount: 79
+    spaceCount: 53
+    wordCount: 49
     linkCount: 0
-    lineCount: 10
+    lineCount: 9
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -3774,6 +3766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: {fileID: 0}
   vfx: []
+  sceneTransition: {fileID: 957913907589029349}
 --- !u!4 &396576139
 Transform:
   m_ObjectHideFlags: 0
@@ -3840,7 +3833,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 3840, y: 2160}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -3887,6 +3880,7 @@ RectTransform:
   - {fileID: 1745263007}
   - {fileID: 1901074009}
   - {fileID: 1970893047}
+  - {fileID: 957913907589029348}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16966,16 +16960,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'TIPS
+  m_text: 'HOW TO PLAY
 
 
-    The first snowman state can jump.
+    WASD to move
 
-    The second and third
-    snowman state can break certain objects within range.
+    SPACE to use an available snowman
+    power
 
-    The fourth snowman
-    state can move really fast.'
+    C to show or hide your Clock
+
+    J to show or hide your Journal
+
+
+    TIPS
+
+
+    Depending
+    on your snowman state, you may not have a snowman power in SPACE. Use the Journal
+    to learn more about each snowman state.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5635313dc292b124999756a9ddd0bc2c, type: 2}
   m_sharedMaterial: {fileID: -5380533980404240228, guid: 5635313dc292b124999756a9ddd0bc2c,
@@ -17004,7 +17007,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 97.05
+  m_fontSize: 88.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17045,12 +17048,12 @@ MonoBehaviour:
   m_margin: {x: -1292.6249, y: 69.59827, z: -1247.0884, w: -1192.8318}
   m_textInfo:
     textComponent: {fileID: 1047836589}
-    characterCount: 418
+    characterCount: 264
     spriteCount: 0
-    spaceCount: 86
-    wordCount: 85
+    spaceCount: 54
+    wordCount: 52
     linkCount: 0
-    lineCount: 11
+    lineCount: 12
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -17828,7 +17831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1745263007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22619,7 +22622,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077744287}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -22648,3 +22651,110 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077744287}
   m_CullTransparentMesh: 0
+--- !u!222 &957913907589029344
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957913907589029355}
+  m_CullTransparentMesh: 0
+--- !u!224 &957913907589029348
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957913907589029355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_Children: []
+  m_Father: {fileID: 401807833}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 66138, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &957913907589029349
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957913907589029355}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 8cc47d0d21ac13d4a9ddba4b6c6c6b1b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &957913907589029350
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957913907589029355}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &957913907589029351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957913907589029355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 08806d2a67a7aa14383f1775bebf17bb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &957913907589029355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957913907589029348}
+  - component: {fileID: 957913907589029344}
+  - component: {fileID: 957913907589029351}
+  - component: {fileID: 957913907589029350}
+  - component: {fileID: 957913907589029349}
+  m_Layer: 5
+  m_Name: Fade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
